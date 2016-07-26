@@ -12,12 +12,19 @@
         <Button>Test</Button>
         <Button>Test</Button>
         <Canvas Width="300" Background="Teal">
-            <Ellipse Height="20" Width="20" Canvas.Top="30" Canvas.Left="50" Fill="BurlyWood"></Ellipse>
+            <Ellipse Height="20" Width="{Binding Value, ElementName=slider}" Canvas.Top="30" Canvas.Left="50" Fill="BurlyWood" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="{Binding Value, ElementName=slider}"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
         </Canvas>
         <StackPanel>
-            <Slider Width="100" >
-                
-            </Slider>
+            <Slider x:Name="slider" Minimum="50" Maximum="100" Width="100" />
         </StackPanel>
     </StackPanel>
 </Window>
