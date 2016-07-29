@@ -5,26 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiiCreator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MiiCreator" Height="350" Width="525">
     <StackPanel x:Name="MainContent" Orientation="Horizontal" HorizontalAlignment="Left">
-        <Button>Test</Button>
-        <Button>Test</Button>
-        <Button>Test</Button>
-        <Button>Test</Button>
-        <Canvas Width="300" Background="Teal">
-            <Ellipse Height="20" Width="{Binding Value, ElementName=slider}" Canvas.Top="30" Canvas.Left="50" Fill="BurlyWood" RenderTransformOrigin="0.5,0.5">
-                <Ellipse.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="{Binding Value, ElementName=slider}"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Ellipse.RenderTransform>
-            </Ellipse>
+        <Button Click="Button_Click" VerticalAlignment="Top" Content="Head"/>
+        <Button VerticalAlignment="Top" Content="Eyes"/>
+        <Button VerticalAlignment="Top" Content="Nose"/>
+        <Button VerticalAlignment="Top" Content="Mouth"/>
+        <Button VerticalAlignment="Top" Content="Hair"/>
+        <Canvas x:Name="FaceCanvas" Width="250" Background="Teal" HorizontalAlignment="Center">
+            <Ellipse x:Name="Head1"
+                Height="{Binding Value, ElementName=heightslider}" 
+                Width="{Binding Value, ElementName=widthslider}" 
+                Fill="BurlyWood" RenderTransformOrigin="0.5,0.5" Canvas.Left="96" Canvas.Top="95"/>
         </Canvas>
         <StackPanel>
-            <Slider x:Name="slider" Minimum="50" Maximum="100" Width="100" />
+            <Slider x:Name="widthslider" Minimum="50" Maximum="100" Width="100" />
+            <Slider x:Name="heightslider" Minimum="50" Maximum="100"/>
         </StackPanel>
     </StackPanel>
 </Window>
