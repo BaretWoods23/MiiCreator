@@ -30,41 +30,53 @@
         <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Margin="30" CornerRadius="10" Background="White"/>
         <Border Grid.Row="1" Grid.Column="2" Margin="30" CornerRadius="10" Background="White"/>
         <Border Grid.Row="2" Grid.Column="2" Margin="30" CornerRadius="10" Background="White"/>
-        <Grid Grid.ColumnSpan="3" Width="50" Margin="15">
-            <Button Margin="-183,0,183,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold">Head</Button>
-            <Button Margin="-89,0,89,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold">Mouth</Button>
-            <Button Margin="10,0,-10,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold">Eyes</Button>
-            <Button Margin="115,0,-115,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold">Nose</Button>
-            <Button Margin="204,0,-204,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold">Other</Button>
+        <Grid Grid.ColumnSpan="3" Width="55" Margin="15">
+            <RadioButton x:Name="HeadTab" Margin="-183,0,183,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold" Unchecked="RadioButton_Checked" Checked="RadioButton_Checked">Head</RadioButton>
+            <RadioButton x:Name="MouthTab" Margin="-89,0,89,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold" Unchecked="MouthTab_Checked" Checked="MouthTab_Checked">Mouth</RadioButton>
+            <RadioButton x:Name="EyesTab" Margin="10,0,-10,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold" Height="23" Unchecked="EyesTab_Checked" Checked="EyesTab_Checked">Eyes</RadioButton>
+            <RadioButton x:Name="NoseTab" Margin="109,0,-109,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold" Unchecked="NoseTab_Checked" Checked="NoseTab_Checked">Nose</RadioButton>
+            <RadioButton x:Name="OtherTab" Margin="204,0,-204,0" FontSize="12" Background="DarkBlue" Foreground="White" FontWeight="Bold" Unchecked="OtherTab_Checked" Checked="OtherTab_Checked">Other</RadioButton>
         </Grid>
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="40,35,40,8">
-            <Button Margin="0,20,0,0" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold">Round</Button>
-            <Button Margin="0,20,0,0" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold">Square</Button>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Margin="40,130,40,40" Grid.RowSpan="2" >
-            <Button Margin="0,20,0,0" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold">Hexagon</Button>
-            <Button Margin="0,20,0,0" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold">Octagon</Button>
-        </StackPanel>
+        <Button x:Name="HeadOptions1" Grid.Row="1" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="HeadOptions1_Click">Circle</Button>
+        <Button x:Name="HeadOptions2" Grid.Row="2" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="HeadOptions2_Click">Square</Button>
+        <Button x:Name="MouthOptions1" Grid.Row="1" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="MouthOptions1_Click" Visibility="Hidden">Neutral</Button>
+        <Button x:Name="MouthOptions2" Grid.Row="2" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="MouthOptions2_Click" Visibility="Hidden">Ooo</Button>
+        <Button x:Name="EyeOptions1" Grid.Row="1" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="EyeOptions1_Click" Visibility="Hidden">Open</Button>
+        <Button x:Name="EyeOptions2" Grid.Row="2" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="EyeOptions2_Click" Visibility="Hidden">Closed</Button>
+        <Button x:Name="NoseOptions1" Grid.Row="1" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="NoseOptions1_Click" Visibility="Hidden">Regular</Button>
+        <Button x:Name="NoseOptions2" Grid.Row="2" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="NoseOptions2_Click" Visibility="Hidden">Dot</Button>
+        <Button x:Name="OtherOptions1" Grid.Row="1" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="OtherOptions1_Click" Visibility="Hidden">None</Button>
+        <Button x:Name="OtherOptions2" Grid.Row="2" Grid.Column="1" Margin="40" FontSize="14" Background="Blue" Foreground="White" FontWeight="Bold" Click="OtherOptions2_Click" Visibility="Hidden">Blush</Button>
         <StackPanel Grid.Row="1" Grid.Column="2" Margin="40,35,40,30" >
-            <Button Margin="0,0,0,0" FontSize="9" Background="Cornsilk" Foreground="Black" FontWeight="Bold" Content="Light"/>
-            <Button Margin="0,5,0,0" FontSize="9" Background="BurlyWood" Foreground="Gray" FontWeight="Bold" Content="Medium"/>
-            <Button Margin="0,5,0,0" FontSize="9" Background="SaddleBrown" Foreground="White" FontWeight="Bold" Content="Dark"/>
+            <Button x:Name="Light" Margin="0,0,0,0" FontSize="9" Background="Cornsilk" Foreground="Black" FontWeight="Bold" Content="Light" Click="Button_Click"/>
+            <Button Margin="0,5,0,0" FontSize="9" Background="BurlyWood" Foreground="Gray" FontWeight="Bold" Content="Medium" IsDefault="True" Click="Button_Click_1"/>
+            <Button Margin="0,5,0,0" FontSize="9" Background="SaddleBrown" Foreground="White" FontWeight="Bold" Content="Dark" Click="Button_Click_2"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2" Margin="40,30">
-            <Slider Maximum="100" Value="50"></Slider>
-            <Slider Maximum="100" Value="50"></Slider>
-            <Slider Maximum="100" Value="50"></Slider>
+            <Slider x:Name="FaceWidthSlider" Maximum="300" Value="150"></Slider>
+            <Slider x:Name="FaceHeightSlider" Maximum="400" Value="200"></Slider>
+            <Slider x:Name="FacePlacementSlider" Maximum="220" Value="110"></Slider>
         </StackPanel>
         <Canvas Grid.Row="1" Grid.RowSpan="2" Margin="20" Width="164">
-            <Ellipse x:Name="Head1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="BurlyWood" Height="204" Width="164"/>
+            <Ellipse x:Name="Head1" Fill="BurlyWood" Height="{Binding Path=Value, ElementName=FaceHeightSlider}" Width="{Binding Path=Value, ElementName=FaceWidthSlider}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5 0.5" Margin="-1000000" Canvas.Left="80" Canvas.Top="{Binding Path=Value, ElementName=FacePlacementSlider}"/>
+            <Rectangle x:Name="Head2" Fill="BurlyWood" Height="{Binding Path=Value, ElementName=FaceHeightSlider}" Width="{Binding Path=Value, ElementName=FaceWidthSlider}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5 0.5" Margin="-1000000" Canvas.Left="80" Canvas.Top="{Binding Path=Value, ElementName=FacePlacementSlider}" Visibility="Hidden"/>
             <Canvas x:Name="Eyes1">
-                <Ellipse Fill="White" Height="25" Width="55" Canvas.Left="21" Canvas.Top="74"/>
-                <Ellipse Fill="Black" Height="5" Width="5" Canvas.Left="46" Canvas.Top="85"/>
-                <Ellipse Fill="White" Height="25" Width="55" Canvas.Left="90" Canvas.Top="74"/>
-                <Ellipse Fill="Black" Height="5" Width="5" Canvas.Left="115" Canvas.Top="85"/>
+                <Ellipse Fill="White" Height="25" Width="55" Canvas.Left="21" Canvas.Top="85"/>
+                <Ellipse Fill="Black" Height="5" Width="5" Canvas.Left="46" Canvas.Top="94"/>
+                <Ellipse Fill="White" Height="25" Width="55" Canvas.Left="90" Canvas.Top="85"/>
+                <Ellipse Fill="Black" Height="5" Width="5" Canvas.Left="115" Canvas.Top="94"/>
             </Canvas>
-            <Rectangle x:Name="Nose1" Stroke="Black" StrokeThickness="3" Height="30" Canvas.Left="77" Canvas.Top="116"></Rectangle>
-            <Rectangle x:Name="Mouth1" Stroke="Black" StrokeThickness="3" Width="13" Canvas.Left="73" Canvas.Top="174"></Rectangle>
+            <Rectangle x:Name="Nose1" Stroke="Black" StrokeThickness="3" Height="26" Canvas.Left="77" Canvas.Top="122" Fill="Black" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="6.742"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle x:Name="Mouth1" Stroke="Black" StrokeThickness="3" Width="13" Canvas.Left="73" Canvas.Top="174" Fill="Black"></Rectangle>
         </Canvas>
     </Grid>
 </Window>
