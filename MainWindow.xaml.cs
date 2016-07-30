@@ -129,42 +129,48 @@ namespace MiiCreator
 
         private void MouthOptions1_Click(object sender, RoutedEventArgs e)
         {
-
+            Mouth2.Visibility = Visibility.Hidden;
+            Mouth1.Visibility = Visibility.Visible;
         }
 
         private void MouthOptions2_Click(object sender, RoutedEventArgs e)
         {
-
+            Mouth1.Visibility = Visibility.Hidden;
+            Mouth2.Visibility = Visibility.Visible;
         }
 
         private void EyeOptions1_Click(object sender, RoutedEventArgs e)
         {
-
+            Eyes2.Visibility = Visibility.Hidden;
+            Eyes1.Visibility = Visibility.Visible;
         }
 
         private void EyeOptions2_Click(object sender, RoutedEventArgs e)
         {
-
+            Eyes1.Visibility = Visibility.Hidden;
+            Eyes2.Visibility = Visibility.Visible;
         }
 
         private void NoseOptions1_Click(object sender, RoutedEventArgs e)
         {
-
+            Nose2.Visibility = Visibility.Hidden;
+            Nose1.Visibility = Visibility.Visible;
         }
 
         private void NoseOptions2_Click(object sender, RoutedEventArgs e)
         {
-
+            Nose1.Visibility = Visibility.Hidden;
+            Nose2.Visibility = Visibility.Visible;
         }
 
         private void OtherOptions1_Click(object sender, RoutedEventArgs e)
         {
-
+            Other.Visibility = Visibility.Hidden;
         }
 
         private void OtherOptions2_Click(object sender, RoutedEventArgs e)
         {
-
+            Other.Visibility = Visibility.Visible;
         }
     }
 }
